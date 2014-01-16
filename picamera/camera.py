@@ -387,7 +387,9 @@ class PiCamera(object):
             mmal.MMAL_DISPLAY_SET_LAYER |
             mmal.MMAL_DISPLAY_SET_ALPHA |
             mmal.MMAL_DISPLAY_SET_FULLSCREEN)
-        mp.layer = 2
+        #changed layer from 2 to 1 - so preview is not always top object on screen
+        #change made for pi_booth photobooth project
+        mp.layer = 1
         mp.alpha = 255
         mp.fullscreen = 1
         mmal_check(
